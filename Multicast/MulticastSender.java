@@ -1,7 +1,9 @@
+package Multicast;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
-import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.MulticastSocket;
 
 public class MulticastSender {
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class MulticastSender {
 
         try {
             // Create a multicast socket
-            DatagramSocket socket = new DatagramSocket();
+            MulticastSocket socket = new MulticastSocket();
 
             // Set the time-to-live for the multicast packets
             socket.setTimeToLive(1);
@@ -37,4 +39,3 @@ public class MulticastSender {
         }
     }
 }
-
